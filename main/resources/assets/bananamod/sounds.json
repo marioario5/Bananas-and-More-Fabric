@@ -1,0 +1,8 @@
+{
+"banana_armor_equip": {
+    "subtitle": "sounds.bananamod.banana_armor_equip",
+    "sounds": [
+      "bananamod:banana_armor_equip"
+    ]
+  }
+}
