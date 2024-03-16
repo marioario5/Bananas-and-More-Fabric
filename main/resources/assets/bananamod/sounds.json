@@ -1,8 +1,33 @@
 {
-"banana_armor_equip": {
-    "subtitle": "sounds.bananamod.banana_armor_equip",
+  "gorilla_idle": {
+    "subtitles": "sounds.bananamod.gorilla.idle",
     "sounds": [
-      "bananamod:banana_armor_equip"
+      "bananamod:gorilla_idle_1",
+      "bananamod:gorilla_idle_2",
+      "bananamod:gorilla_idle_3"
     ]
+  },
+  "gorilla_hurts": {
+  	"subtitles": "sounds.bananamod.gorilla.hurts",
+  	"sounds": [
+  		"bananamod:gorilla_hurts_1",
+  		"bananamod:gorilla_hurts_2"
+  	]
+  },
+  "gorilla_dies": {
+  	"subtitles": "sounds.bananamod.gorilla.dies",
+  	"sounds": [
+  		"bananamod:gorilla_dies_1",
+  		"bananamod:gorilla_dies_2",
+  		"bananamod:gorilla_dies_3"
+  	]
+  },
+  "banana_equip": {
+  	"subtitles": "sounds.bananamod.banana_equips",
+  	"sounds": [
+  		"bananamod:banana_equip_1",
+  		"bananamod:banana_equip_2",
+  		"bananamod:banana_equip_3"
+  	]
   }
 }

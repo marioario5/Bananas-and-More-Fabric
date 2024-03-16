@@ -1,11 +1,14 @@
 package io.github.bananamod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import io.github.bananamod.entity.GorillaEntity;
 import io.github.bananamod.init.BlockInit;
+import io.github.bananamod.init.EntityInit;
 import io.github.bananamod.init.ItemInit;
 import io.github.bananamod.init.SoundInit;
 
@@ -25,5 +28,6 @@ public class BananaMod implements ModInitializer {
 		BlockInit.registerModBlocks();
 		SoundInit.registerModSounds();
 		
+		FabricDefaultAttributeRegistry.register(EntityInit.GORILLA, GorillaEntity.createGorillaAttributes());
 	}
 }

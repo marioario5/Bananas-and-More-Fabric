@@ -8,6 +8,9 @@ import net.minecraft.util.Identifier;
 
 public class SoundInit {
 	public static SoundEvent BANANA_ARMOR_EQUIP = registerSoundEvent("banana_armor_equip");
+	public static final SoundEvent GORILLA_IDLE = registerSoundEvent("gorilla_idle");
+	public static final SoundEvent GORILLA_DIES = registerSoundEvent("gorilla_dies");
+	public static final SoundEvent GORILLA_HURTS = registerSoundEvent("gorilla_hurts");
 	
 	 private static SoundEvent registerSoundEvent(String name) {
 	        Identifier id = new Identifier(BananaMod.MOD_ID, name);

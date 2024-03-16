@@ -19,12 +19,12 @@ public class BlockInit {
 	            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
 	  
 	  public static final Block BANANA_ORE = registerBlock("banana_ore",
-	            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).strength(70, 1200).requiresTool(),
-	                    UniformIntProvider.create(2, 6)));
+	            new ExperienceDroppingBlock(UniformIntProvider.create(2, 6),
+	                    FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).strength(70, 1200).requiresTool()));
 	  
 	  public static final Block DEEPSLATE_BANANA_ORE = registerBlock("deepslate_banana_ore",
-	            new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).strength(75, 1200).requiresTool(),
-	                    UniformIntProvider.create(2, 6)));
+	            new ExperienceDroppingBlock(UniformIntProvider.create(2, 6),
+	                    FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).strength(75, 1200).requiresTool()));
 	  
 	  
 	  
