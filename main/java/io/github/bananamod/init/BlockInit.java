@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -26,6 +27,8 @@ public class BlockInit {
 	            new ExperienceDroppingBlock(UniformIntProvider.create(2, 6),
 	                    FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).strength(75, 1200).requiresTool()));
 	  
+	  public static final Block BANANA_LEAVES = registerBlock("banana_leaves",
+	            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_LEAVES).nonOpaque()));
 	  
 	  
 	private static Block registerBlock(String name, Block block) {

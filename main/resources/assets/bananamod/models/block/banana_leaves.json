@@ -1,0 +1,36 @@
+{
+  "parent": "block/block",
+  "ambientocclusion": false,
+  "shade": true,
+  "textures": {
+    "tinted": "bananamod:block/banana_leaves",
+    "not_tinted": "bananamod:block/banana_overlay",
+    "particle": "bananamod:block/banana_leaves"
+  },
+  "elements": [
+    {
+      "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 16 ],
+      "faces": {
+        "down":  { "texture": "#tinted", "cullface": "down", "tintindex": 1 },
+        "up":    { "texture": "#tinted", "cullface": "up", "tintindex": 1  },
+        "north": { "texture": "#tinted", "cullface": "north", "tintindex": 1  },
+        "south": { "texture": "#tinted", "cullface": "south", "tintindex": 1  },
+        "west":  { "texture": "#tinted", "cullface": "west" , "tintindex": 1 },
+        "east":  { "texture": "#tinted", "cullface": "east", "tintindex": 1  }
+      }
+    },
+    {
+      "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 16 ],
+      "faces": {
+        "down":  { "texture": "#not_tinted", "cullface": "down" },
+        "up":    { "texture": "#not_tinted", "cullface": "up"},
+        "north": { "texture": "#not_tinted", "cullface": "north"},
+        "south": { "texture": "#not_tinted", "cullface": "south"},
+        "west":  { "texture": "#not_tinted", "cullface": "west"},
+        "east":  { "texture": "#not_tinted", "cullface": "east"}
+      }
+    }
+  ]
+}

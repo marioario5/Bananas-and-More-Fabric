@@ -69,7 +69,7 @@ public class GorillaAttackGoal extends MeleeAttackGoal{
     }
     
     protected boolean isTimeToPound() {
-    	return this.entity.distanceTo(this.mob.getTarget()) >= 4F && this.mob.canSee(this.mob.getTarget()) && this.mob.getTarget() != null && this.mob.getTarget().isAlive();
+    	return this.entity.distanceTo(this.mob.getTarget()) >= 2F && this.mob.canSee(this.mob.getTarget()) && this.mob.getTarget() != null && this.mob.getTarget().isAlive();
     }
 
     @Override

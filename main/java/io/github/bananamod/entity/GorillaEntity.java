@@ -72,6 +72,10 @@ public class GorillaEntity extends HostileEntity{
         if(!this.isPounding()) {
         	poundAnimationState.stop();
         }
+        
+        if(this.isPounding()) {
+        	this.getNavigation().equals(null);
+        } 
 
 	}
 	

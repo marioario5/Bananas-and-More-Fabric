@@ -3,35 +3,28 @@ package io.github.bananamod.tools;
 import com.google.common.base.Supplier;
 
 import io.github.bananamod.init.ItemInit;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.util.Lazy;
 
-@SuppressWarnings("deprecation")
 public enum BasisToolMaterial implements ToolMaterial {
-
-	BANANA("banana", 5, 4062, 35, 5, 35, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{ItemInit.PERFECT_BANANA_PEEL});
-    });
 	
-	@SuppressWarnings("unused")
-	private final String Name;
+	BANANA(5, 4062, 35, 5, 35,
+            () -> Ingredient.ofItems(ItemInit.PERFECT_BANANA));
+	
 	private final float AttackDamage;
 	private final int Durability;
 	private final int Enchantability;
 	private final int MiningLevel;
 	private final float MiningSpeed;
-	private final Lazy<Ingredient> repairIngredientSupplier;
+	private final Supplier<Ingredient> repairIngredient;
 	
-	private BasisToolMaterial(String Name, float AttackDamage, int Durability, int Enchantability, int MiningLevel, float MiningSpeed, Supplier<Ingredient> repairIngredientSupplier) {
-		this.Name = Name;
+	private BasisToolMaterial(float AttackDamage, int Durability, int Enchantability, int MiningLevel, float MiningSpeed, Supplier<Ingredient> repairIngredient) {
 		this.AttackDamage = AttackDamage;
 		this.Durability = Durability;
 		this.Enchantability = Enchantability;
 		this.MiningLevel = MiningLevel;
 		this.MiningSpeed = MiningSpeed;
-		this.repairIngredientSupplier = new Lazy<Ingredient>(repairIngredientSupplier);
+		this.repairIngredient = repairIngredient;
 	}
 	
 	@Override
@@ -61,7 +54,7 @@ public enum BasisToolMaterial implements ToolMaterial {
 
 	@Override
 	public Ingredient getRepairIngredient() {
-		return this.repairIngredientSupplier.get();
+		return this.repairIngredient.get();
 	}
 
 }
